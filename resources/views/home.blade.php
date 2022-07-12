@@ -1,11 +1,13 @@
-@extends('tempaltes.base')
+@extends('templates.base')
 
 @section('pageTitle', 'Dc Comics')
 
 @section('pageMain')
     <main>
-        @foreach ($collection as $item)
-            <li>{{$item['title'] }}</li>
-        @endforeach
+        <ul>
+            @foreach ($fumetti as $fumetto)
+                <li>{{ $fumetto['title'] }}</li>
+            @endforeach
+        </ul>
     </main>
 @endsection
