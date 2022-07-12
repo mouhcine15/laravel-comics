@@ -20,18 +20,14 @@
                 CURRENT SERIES
               </div>
               <ul>
-                 {{-- <li v-for="(link, i) in prodotti" :key="i">
-                    <a>
-                      <img :src="link.thumb" alt="">
-                      <div>
-                        {{link.series}}
-                      </div>
-                    </a>
-                 </li> --}}
-                 @foreach ($fumetti as $fumetto)
-                    <li>{{ $fumetto['title'] }}</li>
-                    <img src{{ $fumetto['thumb'] }}>
-                @endforeach
+                  <li>
+                        @foreach ($fumetti as $fumetto)
+                            <a>
+                                <img src= "{{ $fumetto['thumb'] }}">
+                                <div>{{ $fumetto['title'] }}</div>
+                            </a>
+                        @endforeach
+                  </li>
                </ul>
                <div id="more">
                   LOAD MORE
