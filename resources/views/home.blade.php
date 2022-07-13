@@ -34,6 +34,28 @@
                </div>
             </div>
           </div>
+          <div id="secondocontainer">
+            <div id="secondaparte">
+               <ul>
+                 {{-- <li v-for="(link, i) in links" :key="i">
+                    <a :href="link.url">
+                      <img :src="link.img" alt="">
+                      <div id="text">
+                        {{link.text}}
+                      </div>
+                    </a>
+                 </li> --}}
+                 @foreach ($mainList as $link)
+                 <li>
+                   <a>
+                       <img src= "{{ $link['img'] }}">
+                       <div>{{ $link['text'] }}</div>
+                   </a>
+                 </li>
+                @endforeach
+               </ul>
+            </div>
+          </div>
         </div>
     </main>
 @endsection

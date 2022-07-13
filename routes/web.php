@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $fumetti = config('comics');
     $headerList = config('headerList');
+    $mainList = config('mainList');
     return view('home', [
         'fumetti' => $fumetti,
         'headerList' => $headerList,
+        'mainList' => $mainList,
     ]);
 })->name('home');

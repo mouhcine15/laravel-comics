@@ -97,3 +97,34 @@ header #container #menu li a {
   margin: 20px;
 }
 
+.containerMain #secondocontainer {
+  background-color: blue;
+}
+
+.containerMain #secondaparte {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.containerMain #secondaparte li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.containerMain #secondaparte li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.containerMain #secondaparte li a img {
+  width: 50px;
+  height: 60px;
+}
+
+.containerMain #secondaparte ul li a div {
+  padding: 0 10px;
+}
+
