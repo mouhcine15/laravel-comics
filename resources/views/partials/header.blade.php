@@ -1,47 +1,3 @@
-<?php
-$navBar = [
-                [
-                    'text' => "CHARACTERS",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "COMICS",
-                    'url' => "#"
-                ],
-                [
-                    'text' => "MOVIES",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "TV",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "GAMES",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "COLLECTIBLES",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "VIDEOS",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "FANS",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "NEWS",
-                    'url' => "#",
-                ],
-                [
-                    'text' => "SHOP",
-                    'url' => "#",
-                ]
-];
-?>
 
 <header>
     <div id="container">
@@ -50,7 +6,7 @@ $navBar = [
         </div>
         <div id="menu">
             <ul>
-                @foreach ($navBar as $link)
+                @foreach ($headerList as $link)
                     <li>
                         <a href="{{$link['url']}}">{{$link['text']}}</a>
                     </li>
