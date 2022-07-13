@@ -4,12 +4,6 @@
 
 @section('pageMain')
     <main>
-        {{-- <ul>
-            @foreach ($fumetti as $fumetto)
-                <li>{{ $fumetto['title'] }}</li>
-            @endforeach
-        </ul> --}}
-
         <div id="jumbo">
 
         </div>
@@ -19,12 +13,15 @@
               <div id="current">
                 CURRENT SERIES
               </div>
+                  <a href="/prodotto1">primo fumetto</a>
               <ul>
                         @foreach ($fumetti as $fumetto)
                             <li>
-                              <a>
+                              <a href="{{ $fumetto['link']}}">
+                                <div>
                                   <img src= "{{ $fumetto['thumb'] }}">
-                                  <div>{{ $fumetto['title'] }}</div>
+                                  <div>{{ $fumetto['series'] }}</div>
+                                </div>
                               </a>
                             </li>
                         @endforeach
@@ -37,14 +34,6 @@
           <div id="secondocontainer">
             <div id="secondaparte">
                <ul>
-                 {{-- <li v-for="(link, i) in links" :key="i">
-                    <a :href="link.url">
-                      <img :src="link.img" alt="">
-                      <div id="text">
-                        {{link.text}}
-                      </div>
-                    </a>
-                 </li> --}}
                  @foreach ($mainList as $link)
                  <li>
                    <a>

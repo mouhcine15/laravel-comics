@@ -23,3 +23,7 @@ Route::get('/', function () {
         'mainList' => $mainList,
     ]);
 })->name('home');
+
+Route::get('/prodotto1', function () {
+    return view('prodotto1');
+});
