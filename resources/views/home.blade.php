@@ -13,22 +13,22 @@
         <div id="jumbo">
 
         </div>
-        <div id="container">
+        <div class="containerMain">
           <div id="primocontainer">
             <div id="primaparte">
               <div id="current">
                 CURRENT SERIES
               </div>
               <ul>
-                  <li>
                         @foreach ($fumetti as $fumetto)
-                            <a>
-                                <img src= "{{ $fumetto['thumb'] }}">
-                                <div>{{ $fumetto['title'] }}</div>
-                            </a>
+                            <li>
+                              <a>
+                                  <img src= "{{ $fumetto['thumb'] }}">
+                                  <div>{{ $fumetto['title'] }}</div>
+                              </a>
+                            </li>
                         @endforeach
-                  </li>
-               </ul>
+                </ul>
                <div id="more">
                   LOAD MORE
                </div>

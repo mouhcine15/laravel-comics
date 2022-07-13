@@ -1,40 +1,61 @@
+<?php
+$navBar = [
+                [
+                    'text' => "CHARACTERS",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "COMICS",
+                    'url' => "#"
+                ],
+                [
+                    'text' => "MOVIES",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "TV",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "GAMES",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "COLLECTIBLES",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "VIDEOS",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "FANS",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "NEWS",
+                    'url' => "#",
+                ],
+                [
+                    'text' => "SHOP",
+                    'url' => "#",
+                ]
+];
+?>
 
 <header>
     <div id="container">
-        <img src="{{ asset('img/dc-logo.png') }}">
-    </div>
-    <div id="menu">
-        <ul>
-            <li>
-                <a href="">CHARACTERS</a>
-            </li>
-            <li>
-                <a href="">COMICS</a>
-            </li>
-            <li>
-                <a href="">MOVIES</a>
-            </li>
-            <li>
-                <a href="">TV</a>
-            </li>
-            <li>
-                <a href="">GAMES</a>
-            </li>
-            <li>
-                <a href="">COLLECTIBLES</a>
-            </li>
-            <li>
-                <a href="">VIDEO</a>
-            </li>
-            <li>
-                <a href="">FANS</a>
-            </li>
-            <li>
-                <a href="">NEWS</a>
-            </li>
-            <li>
-                <a href="">SHOP</a>
-            </li>
-        </ul>
+        <div>
+            <img src="{{ asset('img/dc-logo.png') }}">
+        </div>
+        <div id="menu">
+            <ul>
+                @foreach ($navBar as $link)
+                    <li>
+                        <a href="{{$link['url']}}">{{$link['text']}}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 </header>
