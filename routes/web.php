@@ -24,6 +24,32 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Route::get('/prodotto1', function () {
-    return view('prodotto1');
-});
+
+Route::get('/home/{series}', function ($series) {
+    $fumetti = null;
+    foreach (config('comics') as $value){
+        if ($value['series'] == $series){
+            $fumetti = $value;
+            break;
+        }
+    }
+
+    if ($fumetti) {
+        return view('prodotto',[
+            'pageTitle' => 'Fumetti - Homepage',
+            'comics'    => $fumetti,
+        ]);
+    } else {
+        abort(404);
+    }
+})->name('prodotto');
+
+
+Route::get('/prodotto', function () {
+    $headerList = config('headerList');
+    $fumetti = config('comics');
+    return view('prodotto', [
+        'headerList' => $headerList,
+        'fumetti' => $fumetti,
+    ]);
+})->name('prodotto');
